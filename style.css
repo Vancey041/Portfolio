@@ -1,6 +1,6 @@
 /* Base Styles */
 :root {
-    --primary-color: #003366; /* USTP inspired blue, can be changed */
+    --primary-color: #003366; 
     --secondary-color: #f4a261;
     --text-color: #333;
     --bg-color: #fff;
@@ -59,16 +59,36 @@ header h2 {
     margin-bottom: 5px;
 }
 
-/* About Section */
+/* About Section & Image Formatting */
 .about-content {
     display: flex;
     gap: 40px;
+    align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.personal-info, .bio {
+.about-image {
     flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes it a circle */
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.about-text {
+    flex: 2;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .personal-info ul {
@@ -80,8 +100,17 @@ header h2 {
     font-size: 1.1rem;
 }
 
+.personal-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.personal-info a:hover {
+    text-decoration: underline;
+}
+
 .bio p {
-    margin-bottom: 15px;
     font-size: 1.1rem;
 }
 
